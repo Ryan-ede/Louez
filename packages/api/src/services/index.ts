@@ -1,4 +1,5 @@
 export * from './address';
+export * from './api-keys';
 export * from './availability';
 export * from './combination-resolver';
 export * from './errors';

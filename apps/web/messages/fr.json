@@ -2163,12 +2163,50 @@
           "resources": "Ressources"
         },
         "categories": {
+          "developer": {
+            "name": "Développeur",
+            "description": "API REST et accès MCP pour créer des intégrations personnalisées."
+          },
           "insurance": {
             "name": "Assurance",
             "description": "Protégez les réservations et synchronisez les contrats d'assurance."
           }
         },
         "providers": {
+          "api": {
+            "name": "API & MCP",
+            "description": "Accédez aux données de votre boutique via l'API REST ou connectez des assistants IA avec MCP.",
+            "about": "L'API Louez vous donne un accès programmatique aux produits, clients et réservations de votre boutique. Utilisez l'API REST pour des intégrations personnalisées ou le serveur MCP pour connecter des assistants IA comme Claude ou ChatGPT.",
+            "features": {
+              "rest": "API REST avec authentification Bearer token pour les produits, clients et réservations.",
+              "mcp": "Serveur MCP (Model Context Protocol) pour connecter des assistants IA directement aux données de votre boutique.",
+              "keys": "Gérez les clés API avec des permissions granulaires et un suivi d'utilisation."
+            },
+            "resources": {
+              "docs": "Documentation"
+            },
+            "keysTitle": "Clés API",
+            "keysDescription": "Gérez les clés API pour l'accès REST et MCP.",
+            "createKey": "Créer une clé",
+            "noKeys": "Aucune clé API. Créez-en une pour commencer.",
+            "keyRevoked": "Clé API révoquée.",
+            "lastUsed": "Dernière utilisation",
+            "endpointsTitle": "Points d'accès",
+            "endpointsDescription": "Utilisez ces endpoints pour accéder aux données de votre boutique.",
+            "restDescription": "Endpoints HTTP standard pour vos données.",
+            "mcpDescription": "Connectez des assistants IA à votre boutique.",
+            "showConfig": "Voir la config",
+            "keyCreated": "Clé API créée",
+            "keyCreatedDescription": "Copiez cette clé maintenant. Vous ne pourrez plus la voir.",
+            "done": "Terminé",
+            "createKeyTitle": "Créer une clé API",
+            "createKeyDescription": "Choisissez un nom et sélectionnez les permissions pour cette clé.",
+            "keyName": "Nom de la clé",
+            "keyNamePlaceholder": "ex. Production, Mon App...",
+            "scopes": "Permissions",
+            "cancel": "Annuler",
+            "create": "Créer"
+          },
           "tulip": {
             "name": "Assurance Tulip",
             "description": "Connectez Tulip pour estimer et générer les contrats d'assurance location.",

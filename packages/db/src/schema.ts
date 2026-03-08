@@ -2072,3 +2072,47 @@ export const inspectionPhotosRelations = relations(inspectionPhotos, ({ one }) =
     references: [inspectionFieldValues.id],
   }),
 }))
+
+// ============================================================================
+// API Keys (for REST API & MCP access)
+// ============================================================================
+
+export const apiKeys = mysqlTable(
+  'api_keys',
+  {
+    id: id(),
+    storeId: varchar('store_id', { length: 21 }).notNull(),
+    createdBy: varchar('created_by', { length: 21 }).notNull(),
+
+    // Key identification
+    name: varchar('name', { length: 100 }).notNull(),
+    keyPrefix: varchar('key_prefix', { length: 8 }).notNull(),
+    keyHash: varchar('key_hash', { length: 64 }).notNull(),
+
+    // Permissions
+    scopes: json('scopes').$type<string[]>().notNull(),
+
+    // Usage tracking
+    lastUsedAt: timestamp('last_used_at', { mode: 'date' }),
+    expiresAt: timestamp('expires_at', { mode: 'date' }),
+
+    // Metadata
+    createdAt: timestamp('created_at', { mode: 'date' }).defaultNow().notNull(),
+    revokedAt: timestamp('revoked_at', { mode: 'date' }),
+  },
+  (table) => ({
+    storeIdx: index('api_keys_store_idx').on(table.storeId),
+    keyHashIdx: index('api_keys_key_hash_idx').on(table.keyHash),
+  })
+)
+
+export const apiKeysRelations = relations(apiKeys, ({ one }) => ({
+  store: one(stores, {
+    fields: [apiKeys.storeId],
+    references: [stores.id],
+  }),
+  creator: one(users, {
+    fields: [apiKeys.createdBy],
+    references: [users.id],
+  }),
+}))

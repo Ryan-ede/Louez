@@ -2163,12 +2163,50 @@
           "resources": "Resources"
         },
         "categories": {
+          "developer": {
+            "name": "Developer",
+            "description": "REST API and MCP access for building custom integrations."
+          },
           "insurance": {
             "name": "Insurance",
             "description": "Protect reservations and synchronize insurance contracts."
           }
         },
         "providers": {
+          "api": {
+            "name": "API & MCP",
+            "description": "Access your store data via REST API or connect AI assistants with MCP.",
+            "about": "The Louez API gives you programmatic access to your store's products, customers, and reservations. Use the REST API for custom integrations or the MCP server to connect AI assistants like Claude or ChatGPT.",
+            "features": {
+              "rest": "REST API with Bearer token authentication for products, customers, and reservations.",
+              "mcp": "MCP server (Model Context Protocol) to connect AI assistants directly to your store data.",
+              "keys": "Manage API keys with granular permission scopes and usage tracking."
+            },
+            "resources": {
+              "docs": "Documentation"
+            },
+            "keysTitle": "API Keys",
+            "keysDescription": "Manage API keys for REST API and MCP access.",
+            "createKey": "Create key",
+            "noKeys": "No API keys yet. Create one to get started.",
+            "keyRevoked": "API key revoked.",
+            "lastUsed": "Last used",
+            "endpointsTitle": "Endpoints",
+            "endpointsDescription": "Use these endpoints to access your store data.",
+            "restDescription": "Standard HTTP endpoints for your data.",
+            "mcpDescription": "Connect AI assistants to your store.",
+            "showConfig": "Show config",
+            "keyCreated": "API key created",
+            "keyCreatedDescription": "Copy this key now. You won't be able to see it again.",
+            "done": "Done",
+            "createKeyTitle": "Create API key",
+            "createKeyDescription": "Choose a name and select the permissions for this key.",
+            "keyName": "Key name",
+            "keyNamePlaceholder": "e.g. Production, My App...",
+            "scopes": "Permissions",
+            "cancel": "Cancel",
+            "create": "Create"
+          },
           "tulip": {
             "name": "Tulip Insurance",
             "description": "Connect Tulip to quote and generate rental insurance contracts.",
